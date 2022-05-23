@@ -14,10 +14,12 @@
     "format": "prettier --write --plugin-search-dir=. ."
   },
   "dependencies": {
+    "express": "^4.18.1"
   },
   "devDependencies": {
     "@playwright/test": "^1.22.2",
     "@sveltejs/adapter-auto": "next",
+    "@sveltejs/adapter-node": "next",
     "@sveltejs/kit": "next",
     "@types/node": "^17.0.35",
     "@typescript-eslint/eslint-plugin": "^5.25.0",

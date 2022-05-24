@@ -14,7 +14,8 @@
     "format": "prettier --write --plugin-search-dir=. ."
   },
   "dependencies": {
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "socket.io": "^4.5.1"
   },
   "devDependencies": {
     "@playwright/test": "^1.22.2",

@@ -1,6 +1,7 @@
-// my-server.js
-import { handler } from "./build/handler.js";
 import express from "express";
+import { handler } from "./build/handler.js";
+import http from "http";
+import { Server } from "socket.io";
 
 const app = express();
 
@@ -11,7 +12,9 @@ app.get("/healthcheck", (req, res) => {
 
 // let SvelteKit handle everything else, including serving pre-rendered pages and static assets
 app.use(handler);
+const httpServer = http.createServer(app);
+const io = new Server(httpServer);
 
-app.listen(3000, () => {
+httpServer.listen(3000, () => {
   console.log("Listening on port 3000");
 });
